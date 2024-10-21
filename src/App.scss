@@ -1,0 +1,89 @@
+$gap: 108px;
+$url: "https://s3-alpha-sig.figma.com/img/73df/cd1d/2685aabd100b691b8c4e129cce68cb75?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A4ihzqNG3swDGjkZRDDvKqbjVWDfxFQQx1m7NFe7EeFkHe~e6fj9Owi1MaoNclnBm0EkTA3e3Qk~KhDV8j43KIFalVkjlvdxX0jrYbP3kTcXSy3OFcjTEFY8YDLWPRqNU792vW5hD~M5cKA9aa6mma0bxjGL9VbvyXGlJf4P67jqLYK5YaPF9zXZgMCIKITUPvuSnYrnv4M2s8C~LvkBlY7VhEXsvpV1LPlUpa25fXOqi60WjCbsKMpGWd2r9zRdCGbkNMZhxitd8UJTSzRaRgJ7Yzri~HYHEoSnOVXeI9QqVOWP8d-eC6hP0glvHHUY9YQ9zZnZXsSl0yUwfg7EVA__";
+
+.App {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url($url);
+    background-size: cover;
+    opacity: 4%;
+    z-index: -1;
+  }
+
+  .parent {
+    &__container {
+      z-index: 99;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: $gap;
+
+      .card-and-input {
+        display: flex;
+        align-items: flex-end;
+        gap: 16px;
+      }
+
+      .cards-in-row {
+        display: flex;
+        justify-content: space-between;
+        gap: $gap;
+        align-items: end;
+      }
+
+      .cards-in-sec-row {
+        display: flex;
+        justify-content: center;
+        gap: $gap;
+        position: relative;
+        z-index: 999;
+      }
+    }
+  }
+}
+
+.curve-line {
+  position: absolute;
+  top: 230px;
+  left: 350px;
+  z-index: 999;
+}
+
+.curve-line-one {
+  position: absolute;
+  top: 230px;
+  z-index: 999;
+}
+
+.curve-line-three {
+  position: absolute;
+  top: 230px;
+  right: 15px;
+  z-index: 999;
+}
+
+.curve-line-four {
+  position: absolute;
+  top: 230px;
+  left: 540px;
+  z-index: 999;
+}
+
+.curve-line-five {
+  position: absolute;
+  top: 230px;
+  right: 40px;
+  z-index: 999;
+}
